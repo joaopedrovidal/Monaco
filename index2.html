@@ -23,9 +23,9 @@
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>Ou use seu e-mail para registrar-se</span>
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Senha">
+                <input type="text" placeholder="Nome" id="nome">
+                <input type="email" placeholder="Email" id="email">
+                <input type="password" placeholder="Senha" id="senha">
                 <button>Registre-se</button>
             </form>
         </div>
@@ -55,7 +55,7 @@
                 <div class="toggle-panel toggle-right">
                     <h1>Olá, Amigo(a)!</h1>
                     <p>Crie sua conta para usar todos os recursos do site</p>
-                    <button class="hidden" id="register">Registre-se</button>
+                    <button type="button"  onclick="registrar()" class="hidden" id="register">Registre-se</button>
                 </div>
             </div>
         </div>

@@ -1,0 +1,279 @@
+:root{
+    --title-color: #322153;
+    --primary-color: #34cb79;
+    --hover-color: #2fb86e;
+    --text-color: #6C6C80;
+    --input-color: #F0F0F5;
+    --background-image-color: #E1FAEC;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+html {
+    font-family: "Roboto", sans-serif;
+    --webkit-font-swoothing: antialiased;
+  }
+
+body{
+    background: #f0f0f5;
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+}
+  
+h1, h2, h3, h4, h5, h6{
+    font-family: "Ubuntu", sans-serif;
+    color: var(--title-color);
+}
+
+#page-cadastro header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+#page-cadastro header a{
+    display: flex;
+    color: var(--title-color);
+    font-weight: 700;
+  
+}
+  
+#page-cadastro header a span{
+    margin-right: 16px;
+    display: flex;
+    background-image: url(./assets/arrow-left.svg);
+    width: 20px;
+    height: 20px;
+}
+
+main{
+    margin-top: 44px;
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF;
+    width: 736px;
+    height: 2327px;
+    top: 159px;
+    left: 352px;
+    border-radius: 8px;
+}
+
+main div h1{
+    margin-top: 44px;
+    font-size: 36px;
+    width: 269px;
+    height: 223px;
+    top: 223px;
+    left: 416px;
+}
+
+.file{
+    width: 608px;
+    height: 304px;
+    background-color: var(--primary-color);
+    border: 1px dashed black;
+    display: flex;
+    justify-content: center;
+
+}
+  
+.dados{
+    width: 608px;
+    height: 356px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dados h1{
+    font-size: 24px;
+}
+
+.dados label{
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.dados input{
+    outline: none;
+    border: none;
+    background: var(--input-color);
+    border-radius: 8px;
+    width: 608px;
+    height: 120px;
+}
+
+.input-dados{
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#numero {
+    width: 50%;
+}
+
+.endereco span{
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.endereco h1{
+    font-size: 24px;
+}
+
+.endereco h1, span{
+    justify-content: space-around;
+}
+
+.cidade-numero {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.cidade-input, .numero-input {
+    flex: 1; 
+}
+
+#cidade-endereco, #numero-endereco {
+    width: 100%; 
+    height: 56px;
+    background: var(--input-color);
+    border: none;
+    border-radius: 8px;
+}
+
+label{
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.estado-endereco{
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.select-estado-endereco{
+    outline: none;
+    border: none;
+    background: var(--input-color);
+    border-radius: 8px;
+    width: 100%;
+    height: 56px;
+}
+
+#mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; /* Centraliza horizontalmente */
+    width: 100%; /* Garante que o iframe ocupe 100% do contêiner */
+}
+
+#mapa iframe {
+    width: 100%; /* Mapa ocupa 100% da largura do contêiner */
+    height: 342px; /* Define a altura do iframe */
+    max-width: 600px; /* Define um tamanho máximo opcional para o iframe */
+}
+
+
+legend{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    list-style-type: none; 
+    gap: 15px;
+    margin-top: 35px;
+}
+
+ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--background-image-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 192px;
+    height: 184px;
+}
+
+ul li img {
+    width: 64px;
+    height: 64px;
+}
+
+ul li span {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--title-color) !important;
+}
+
+button{
+    outline: none;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    border-radius: 8px;
+    width: 266px;
+    height: 56px;
+    float: right;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+button:hover{
+    background-color: var(--hover-color);
+}
+
+.arquivo-personalizado{
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--background-image-color); /* Mude para a cor que preferir */
+    color: var(--title-color);
+    border-radius: 5px;
+    text-align: center;
+    width: 608px;
+    height: 304px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px;
+    border-radius: 8px var(--primary-color);
+    font-size: 16px;
+}
+
+.borda-upload{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 544px;
+    height: 240px;
+    border: 1px var(--primary-color) dashed;
+    border-radius: 8px;
+}
+
+.borda-upload img{
+    width: 24px;
+    height: 24px;
+}

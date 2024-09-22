@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="estilo4.css">
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+    <title>Cadastro de Ponto | Ecoleta</title>
+</head>
+
+<body>
+    <div id="page-cadastro">
+        <div class="content">
+            <header>
+                <img src="./assets/logo.svg" alt="logotipo">
+                <a href="index.html">
+                    <span></span>
+                    Volte para home
+                </a>
+            </header>
+            <main>
+                <div>
+                    <h1>Cadastro do
+                        <br>
+                        ponto de coleta
+                    </h1>
+                    <div>
+                        <label for="carregar-arquivo" class="arquivo-personalizado">
+                            <div class="borda-upload">
+                                <img src="./assets/Upload.svg" alt="">
+                                <span>Imagem do estabelecimento</span>
+                            </div>
+                        </label>
+                        <input id="carregar-arquivo" type="file" accept="image/*" multiple style="display: none;" class="arquivo">
+                    </div>
+                    <div class="dados">
+                        <h1>Dados</h1>
+                        <label> Nome da entidade </label>
+                        <input type="text" class="input-dados">
+                        <label> Email </label>
+                        <input type="text" class="input-dados">
+                        <label> WhatsApp </label>
+                        <input type="number" class="input-dados" id="numero">
+                    </div>
+                    <div class="endereco">
+                        <legend>
+                            <h1>Endereço</h1>
+                            <span>Selecione o endereço no mapa</span>
+                        </legend>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13354716.707412196!2d-107.4773719!3d35.1957846!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b486519abc33%3A0x5a991216714e31ee!2sNike%20Miami!5e0!3m2!1spt-BR!2sbr!4v1709345545044!5m2!1spt-BR!2sbr"  id="mapa"></iframe>
+                        </a>
+                        <div>
+                            <div class="cidade-numero">
+                                <div class="cidade-input">
+                                    <label> Número </label>
+                                    <input type="number" id="numero-endereco">
+                                </div>
+                                <div class="numero-input">
+                                    <label> Cidade </label>
+                                    <input type="text" id="cidade-endereco">
+                                </div>
+                            </div>
+                            <label class="estado-endereco"> Estado </label>
+                            <select id="estado" class="select-estado-endereco">
+                                <option value="" selected disabled></option>
+                                <option value="AC">AC</option>
+                                <option value="AL">AL</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="ES">ES</option>
+                                <option value="GO">GO</option>
+                                <option value="MA">MA</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="MG">MG</option>
+                                <option value="PA">PA</option>
+                                <option value="PB">PB</option>
+                                <option value="PR">PR</option>
+                                <option value="PE">PE</option>
+                                <option value="PI">PI</option>
+                                <option value="RJ">RJ</option>
+                                <option value="RN">RN</option>
+                                <option value="RS">RS</option>
+                                <option value="RO">RO</option>
+                                <option value="RR">RR</option>
+                                <option value="SC">SC</option>
+                                <option value="SP">SP</option>
+                                <option value="SE">SE</option>
+                                <option value="TO">TO</option>
+                            </select>
+                            <legend>
+                                <h2>Ítens de coleta</h2>
+                                <span>Selecione um ou mais ítens</span>
+                            </legend>
+                            <ul>
+                               <li>
+                                    <img src="./assets/lampadas.svg" alt="lâmpadas">
+                                    <span>Lâmpadas</span>
+                               </li>
+                               <li>
+                                    <img src="./assets/baterias.svg" alt="Pilhas e Baterias">
+                                    <span>Pilhas e Baterias</span>
+                               </li> 
+                               <li>
+                                    <img src="./assets/papeis-papelao.svg" alt="Papéis e Papelão">
+                                    <span>Papéis e Papelão</span>
+                               </li> 
+                               <li>
+                                    <img src="./assets/eletronicos.svg" alt="Resíduos Eletrônicos">
+                                    <span>Resíduos Eletrônicos</span>
+                               </li> 
+                               <li>
+                                    <img src="./assets/organicos.svg" alt="Resíduos Orgânicos">
+                                    <span>Resíduos Orgânicos</span>
+                               </li> 
+                               <li>
+                                    <img src="./assets/oleo.svg" alt="Óleo de Cozinha">
+                                    <span>Óleo de cozinha</span>
+                               </li> 
+                            </ul>
+                            <button type="submit">Cadastrar ponto de coleta</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
