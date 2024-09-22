@@ -6,3 +6,6 @@
 
 # Ignorar arquivos de configuração de rotas
 /routes
+
+# Ignorar arquivos de dependências
+/node_modules
