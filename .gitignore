@@ -1,0 +1,8 @@
+# Ignorar arquivos de configuração do banco de dados
+/database
+
+# Ignorar arquivos de configuração de controle 
+/controllers
+
+# Ignorar arquivos de configuração de rotas
+/routes
