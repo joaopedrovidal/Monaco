@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6{
 #page-cadastro header a span{
     margin-right: 16px;
     display: flex;
-    background-image: url(./assets/arrow-left.svg);
+    background-image: url(./assets/Voltar.svg);
     width: 20px;
     height: 20px;
 }
