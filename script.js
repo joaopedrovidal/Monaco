@@ -3,22 +3,19 @@ const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
 
 registerBtn.addEventListener('click', () => {
-    container.classList.add("active");
+    container.classList.add("active");   
 });
 
 loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-
-
 function registrar(){
-    
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
 
-    fetch('http://localhost:4000/novoUsuario',{
+     fetch('http://localhost:4000/novoUsuario',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
