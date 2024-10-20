@@ -9,4 +9,7 @@ router.post('/novoUsuario', UsuarioController.novoUsuario)
 // Rota para pegar os usuários no banco de dados
 router.get('/usuarios', UsuarioController.logarUsuario)
 
+//Rota para adicionar os dados do local no banco de dados
+router.post('/novoPonto', UsuarioController.cadastrarPonto)
+
 module.exports = router
