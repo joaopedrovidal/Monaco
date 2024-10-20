@@ -38,9 +38,9 @@
                     <div class="dados">
                         <h1>Dados</h1>
                         <label> Nome da entidade </label>
-                        <input type="text" class="input-dados">
+                        <input type="text" class="input-dados" id="nomeLocal">
                         <label> Email </label>
-                        <input type="text" class="input-dados">
+                        <input type="text" class="input-dados" id="emailLocal">
                         <label> WhatsApp </label>
                         <input type="number" class="input-dados" id="numero">
                     </div>
@@ -123,13 +123,14 @@
                                     <span>Óleo de cozinha</span>
                                </li> 
                             </ul>
-                            <button type="submit">Cadastrar ponto de coleta</button>
+                            <button type="submit" onclick="cadastrarPonto()">Cadastrar ponto de coleta</button>
                         </div>
                     </div>
                 </div>
             </main>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
