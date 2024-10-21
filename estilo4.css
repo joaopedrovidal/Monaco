@@ -315,3 +315,13 @@
       height:40px;
     }
 }
+
+.cidade-input input, 
+.numero-input input,
+#cidade-endereco, 
+#numero-endereco,
+#estado {
+    border: 1px solid var(--input-color);
+    border-radius: 8px;
+    height: 40px;
+}
