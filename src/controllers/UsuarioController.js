@@ -43,11 +43,11 @@ class UsuarioController {
 
     // Cadastra ponto de coleta no banco de dados
     cadastrarPonto(request, response){
-        const { local_nome, local_email, local_numero } = request.body;
+        const { local_nome, local_email, local_numero, endereco_numero, endereco_cidade, endereco_estado } = request.body;
         console.log(local_nome, local_email, local_numero);
         
 
-        database.insert({ local_nome, local_email, local_numero }).table("ponto")
+        database.insert({ local_nome, local_email, local_numero, endereco_numero, endereco_cidade, endereco_estado }).table("ponto")
         .then (data =>{
             console.log(data);
             response.json({ message: "Ponto cadastrado com sucesso!" });

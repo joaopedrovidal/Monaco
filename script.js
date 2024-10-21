@@ -65,7 +65,10 @@ function cadastrarPonto(){
         body: JSON.stringify({
             local_nome: nomeLocal,
             local_email: emailLocal,
-            local_numero: telefoneLocal
+            local_numero: telefoneLocal,
+            endereco_numero: numeroEndereco,
+            endereco_cidade: cidade,
+            endereco_estado: estado
         })
     })
     .then(response => response.json()) // Converte a resposta em JSON
