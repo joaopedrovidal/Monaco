@@ -1,3 +1,4 @@
+const { message } = require('statuses');
 const database = require('../database/connection');
 const bcrypt = require('bcrypt');
 
@@ -28,9 +29,30 @@ class UsuarioController {
         }
     }
 
-    // Verifica no banco os usuários
-    logarUsuario(request, response) {
-        database.select("*").table("usuario")
+    // Verifica no banco se o usuário existe tendo como base o email informado
+    async logarUsuario(request, response) {
+        const { email, senha } = request.body;
+
+        try{
+            const usuario = await database('usuario').where({ email }).first();
+
+                if(!usuario){
+                    return response.status(404).json({ message: "Usuário não encontrado "});
+                }
+
+            const senhaValida = await bcrypt.compare(senha, usuario.senha);  // Variável de senha válida com a cirptografia
+            
+                if(senhaValida){
+                    return response.json({ message: "Login bem-sucedido!"});
+                }else{
+                    return response.status(401).json({ message: "Senha incorreta" });
+                }
+            } catch (error){
+                console.log(error);
+                response.status(500).json({ message: "Erro ao tentar fazer login" });
+            }
+        }
+        /* database.select("*").table("usuario")
             .then(usuarios => {
                 console.log(usuarios);
                 response.json(usuarios);
@@ -39,7 +61,7 @@ class UsuarioController {
                 console.log(error);
                 response.status(500).json({ message: "Erro ao buscar usuários" });
             });
-    }
+    } */
 
     // Cadastra ponto de coleta no banco de dados
     cadastrarPonto(request, response){
