@@ -2,6 +2,7 @@ const { application } = require("express");
 const { post } = require("./src/routes/routes");
 const { json } = require("body-parser");
 const { stringify } = require("qs");
+const { method } = require("lodash");
 
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
@@ -39,6 +40,38 @@ function registrar(){
     })
     .catch(error => {
     console.error('Erro ao cadastrar usuário:', error);
+    });
+}
+
+// Função para login 
+function entrar(event){
+    event.preventDefault();
+    const email = document.getElementById("emailLogin").value;
+    const senha = document.getElementById("senhaLogin").value;
+
+    fetch('http://localhost:4000/login',{  
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            email: email,
+            senha: senha
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(data.message === "Login bem-sucedido!"){
+            console.log("Login efetuado com sucesso:", data);
+            window.location.href = 'index4.html';
+        } else {
+            console.error("Erro de login:", data.nessage);
+            alert("Erro:" + data.message);
+        }
+    })
+    .catch(error => {
+        console.error("Erro ao efetuar o login:", error);
+        alert("Erro ao efetuar o login: " + error);
     });
 }
 
