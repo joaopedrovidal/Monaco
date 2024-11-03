@@ -12,4 +12,7 @@ router.post('/login', UsuarioController.logarUsuario)
 //Rota para adicionar os dados do local no banco de dados
 router.post('/novoPonto', UsuarioController.cadastrarPonto)
 
+//Rota para buscar pontos de coletas cadastrados
+router.get('/buscarPonto', UsuarioController.buscarPonto)
+
 module.exports = router
