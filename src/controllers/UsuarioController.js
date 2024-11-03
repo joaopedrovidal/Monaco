@@ -65,11 +65,12 @@ class UsuarioController {
 
     // Cadastra ponto de coleta no banco de dados
     cadastrarPonto(request, response){
-        const { local_nome, local_email, local_numero, endereco_numero, endereco_cidade, endereco_estado } = request.body;
+        const { local_nome, local_email, local_numero, endereco_numero, endereco_cidade, endereco_estado, itens_coleta } = request.body;
         console.log(local_nome, local_email, local_numero);
-        
+        const itensColetaString = itens_coleta.join(', ');
 
-        database.insert({ local_nome, local_email, local_numero, endereco_numero, endereco_cidade, endereco_estado }).table("ponto")
+
+        database.insert({ local_nome, local_email, local_numero, endereco_numero, endereco_cidade, endereco_estado, itens_coleta: itensColetaString }).table("ponto")
         .then (data =>{
             console.log(data);
             response.json({ message: "Ponto cadastrado com sucesso!" });
@@ -79,6 +80,25 @@ class UsuarioController {
             response.status(500).json({ message: "Erro ao tentar cadastrar ponto!" });
         })
     }
+
+    async buscarPonto(request, response){
+        const{ cidade, estado } = request.query;
+
+        if (!cidade || !estado){
+            return response.status(400).json({ error: 'Cidade e estado são obrigatórios.'});
+        }
+
+        try{
+            const pontos = await database.select("*").from('ponto').where({
+                endereco_cidade: cidade,
+                endereco_estado: estado
+            });
+            response.json(pontos);
+        }catch (error){
+            console.error("Erro ao buscar pónto de coleta:", error);
+            response.status(500).json({ error: "Erro ao buscar pontos de coleta" });
+        }    
+    }    
 }
 
 module.exports = new UsuarioController();
