@@ -218,7 +218,11 @@
     font-size: 16px;
     color: var(--title-color) !important;
   }
-  
+
+.checkbox{
+  margin: 5px;
+}
+
   button {
     outline: none;
     background-color: var(--primary-color);
