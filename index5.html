@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Ponto | Ecoleta</title> 
+    <link rel="stylesheet" href="style5.css">
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="container" id="container">
+    <div class="form-container">
+        <div class="image-logo">
+            <a href="index.html">
+                <img src="./assets/logo.svg" alt="logo site">
+            </a>
+        </div>
+        <form id="Form" onsubmit="carregarResultados(event)">
+            <h2>Informe sua localização</h2>
+            
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado" required>
+                <option value="Selecione o Estado">Selecione o Estado</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+            </select>
+    
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Digite o nome da cidade" required>
+            
+            
+    
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+    </div>
+    <div id="resultados-container" style="margin-top: 20px;"></div>
+    <script src="script.js"></script>
+</body>
+</html>
