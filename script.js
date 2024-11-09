@@ -97,7 +97,7 @@ function cadastrarPonto() {
     }
 
     // Consumindo a API no front-end
-    fetch('http://localhost:4000/novoPonto', {
+    fetch('/novoPonto', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
