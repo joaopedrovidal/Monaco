@@ -22,7 +22,7 @@ function registrar() {
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
 
-    fetch('https://monaco-lilac.vercel.app/novoUsuario', {
+    fetch('http://localhost:4000/novoUsuario', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ function entrar(event) {
     const email = document.getElementById("emailLogin").value;
     const senha = document.getElementById("senhaLogin").value;
 
-    fetch('https://monaco-lilac.vercel.app/login', {  
+    fetch('http://localhost:4000/login', {  
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ function cadastrarPonto() {
     }
 
     // Consumindo a API no front-end
-    fetch('https://monaco-lilac.vercel.app/novoPonto', {
+    fetch('http://localhost:4000/novoPonto', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -153,7 +153,7 @@ async function carregarResultados(event) {
     const estado = document.getElementById("estado").value;
 
     try {
-        const response = await fetch(`https://monaco-lilac.vercel.app/buscarPonto?cidade=${cidade}&estado=${estado}`, {
+        const response = await fetch(`http://localhost:4000/buscarPonto?cidade=${cidade}&estado=${estado}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
